@@ -1,4 +1,4 @@
-# AI Wrap - Laravel AI Tools
+# AI-driven Code Sample Transpiler in a Laravel Wrapper
 
 A clean Laravel application providing AI-powered tools for developers. This project has been cleaned to include only essential functionality.
 
