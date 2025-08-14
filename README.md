@@ -154,23 +154,11 @@ Automatically categorize technical content with difficulty levels and keyword ex
 
 8. **Configure OpenAI API key**:
    ```bash
-   ddev exec "sed -i 's/OPENAI_API_KEY=.*/OPENAI_API_KEY=your_actual_api_key_here/' .env"
-   ```
-   
-   **Or manually edit `.env`**:
-   ```bash
    ddev exec "nano .env"
    ```
-   Find the line `OPENAI_API_KEY=` and add your OpenAI API key.
+   Add the line `OPENAI_API_KEY=` and include your OpenAI API key.
 
-   **Note:** Needed to add the line altogether.
-
-9. **Run database migrations**:
-   ```bash
-   ddev artisan migrate
-   ```
-
-   **Note:** Needed to change the DB settings in the .env file to:
+   Also, add these DB settings:
 
    ```bash
    DB_CONNECTION=mysql
@@ -179,11 +167,17 @@ Automatically categorize technical content with difficulty levels and keyword ex
    DB_DATABASE=db
    DB_USERNAME=db
    DB_PASSWORD=db
+   ```   
+
+10. **Run database migrations**:
+   ```bash
+   ddev artisan migrate
    ```
 
-10. **Build frontend assets** (optional, for production):
+11. **Build frontend assets** (optional, for production):
     ```bash
     ddev npm run build
+    ddev start
     ```
 
 ### Accessing the Application
